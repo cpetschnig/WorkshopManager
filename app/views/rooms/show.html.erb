@@ -15,6 +15,15 @@
   <%= @room.capacity %>
 </p>
 
+<p>
+  <b>Workshops:</b>
+  <ul>
+    <% @room.workshops.each do |workshop| %>
+      <li><%= link_to(workshop.name, workshop) %></li>
+    <% end %>
+  </ul>
+</p>
+
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
