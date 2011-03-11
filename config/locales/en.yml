@@ -2,4 +2,63 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+
+  time:
+    units:
+      minutes:
+        short: min.
+
+  errors:
+    on_save: "%{count} errors prohibited this object from being saved"
+
+  activerecord:
+    models:
+      room: Room
+      workshop: Workshop
+
+  attributes:
+    name: Name
+    location: Location
+    capacity: Capacity
+    start_at: Start Time
+    end_at: End Time
+    duration: Duration
+    room_id: Room
+
+  controller:
+    room_creation_success: Room was successfully created.
+    room_update_success: Room was successfully updated.
+    workshop_creation_success: Workshop was successfully created.
+    workshop_update_success: Workshop was successfully updated.
+
+  back: Back
+  edit: Edit
+  show: Show
+  destroy: Delete
+  confirm_delete: Are you sure?
+
+  rooms:
+    room: Room
+    index: Rooms
+    list_header: List of Rooms
+    edit_header: Edit Room
+    new_header: Create new Room
+    new: New Room
+    name: Name
+    location: Location
+    capacity: Capacity
+    workshops: Workshops
+
+  workshops:
+    index: Workshops
+    list_header: List of Workshops
+    edit_header: Edit Workshop
+    new_header: Create new Workshop
+    new: New Workshop
+    name: Name
+    start_at: Start Time
+    end_at: End Time
+    duration: Duration
+    room: Room
+
+

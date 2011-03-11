@@ -44,7 +44,7 @@ class RoomsController < ApplicationController
 
     respond_to do |format|
       if @room.save
-        format.html { redirect_to(@room, :notice => 'Room was successfully created.') }
+        format.html { redirect_to(@room, :notice => t('controller.room_creation_success')) }
         format.xml  { render :xml => @room, :status => :created, :location => @room }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class RoomsController < ApplicationController
 
     respond_to do |format|
       if @room.update_attributes(params[:room])
-        format.html { redirect_to(@room, :notice => 'Room was successfully updated.') }
+        format.html { redirect_to(@room, :notice => t('controller.room_update_success')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

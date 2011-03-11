@@ -44,7 +44,7 @@ class WorkshopsController < ApplicationController
 
     respond_to do |format|
       if @workshop.save
-        format.html { redirect_to(@workshop, :notice => 'Workshop was successfully created.') }
+        format.html { redirect_to(@workshop, :notice => t('controller.workshop_creation_success')) }
         format.xml  { render :xml => @workshop, :status => :created, :location => @workshop }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class WorkshopsController < ApplicationController
 
     respond_to do |format|
       if @workshop.update_attributes(params[:workshop])
-        format.html { redirect_to(@workshop, :notice => 'Workshop was successfully updated.') }
+        format.html { redirect_to(@workshop, :notice => t('controller.workshop_update_success')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

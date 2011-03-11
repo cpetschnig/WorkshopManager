@@ -1,6 +1,6 @@
-<h1>Editing workshop</h1>
+<h1><%= t('workshops.edit_header') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @workshop %> |
-<%= link_to 'Back', workshops_path %>
+<%= link_to t(:show), @workshop %> |
+<%= link_to t(:back), workshops_path %>

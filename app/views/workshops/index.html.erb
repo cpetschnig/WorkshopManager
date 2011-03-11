@@ -1,11 +1,11 @@
-<h1>Listing workshops</h1>
+<h1><%= t('workshops.list_header') %></h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Start at</th>
-    <th>Duration</th>
-    <th>Room</th>
+    <th><%= t('workshops.name') %></th>
+    <th><%= t('workshops.start_at') %></th>
+    <th><%= t('workshops.duration') %> [<%= t('time.units.minutes.short') %>]</th>
+    <th><%= t('workshops.room') %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,16 +14,16 @@
 <% @workshops.each do |workshop| %>
   <tr>
     <td><%= workshop.name %></td>
-    <td><%= workshop.start_at %></td>
+    <td><%= l(workshop.start_at, :format => :short) %></td>
     <td><%= workshop.duration %></td>
     <td><%= workshop.room.name %></td>
-    <td><%= link_to 'Show', workshop %></td>
-    <td><%= link_to 'Edit', edit_workshop_path(workshop) %></td>
-    <td><%= link_to 'Destroy', workshop, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="action"><%= link_to t(:show), workshop %></td>
+    <td class="action"><%= link_to t(:edit), edit_workshop_path(workshop) %></td>
+    <td class="action"><%= link_to t(:destroy), workshop, :confirm => t(:confirm_delete), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Workshop', new_workshop_path %>
+<%= link_to t('workshops.new'), new_workshop_path %>

@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t('workshops.name') %>:</b>
   <%= @workshop.name %>
 </p>
 
 <p>
-  <b>Start at:</b>
-  <%= @workshop.start_at %>
+  <b><%= t('workshops.start_at') %>:</b>
+  <%= l(@workshop.start_at) %>
 </p>
 
 <p>
-  <b>Duration:</b>
-  <%= @workshop.duration %>
+  <b><%= t('workshops.duration') %>:</b>
+  <%= @workshop.duration %> <%= t('time.units.minutes.short') %>
 </p>
 
 <p>
-  <b>Room:</b>
+  <b><%= t('workshops.room') %>:</b>
   <%= link_to(@workshop.room.name, @workshop.room) %>
 </p>
 
 
-<%= link_to 'Edit', edit_workshop_path(@workshop) %> |
-<%= link_to 'Back', workshops_path %>
+<%= link_to t(:edit), edit_workshop_path(@workshop) %> |
+<%= link_to t(:back), workshops_path %>

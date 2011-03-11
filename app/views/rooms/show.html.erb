@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t('rooms.name') %>:</b>
   <%= @room.name %>
 </p>
 
 <p>
-  <b>Location:</b>
+  <b><%= t('rooms.location') %>:</b>
   <%= @room.location %>
 </p>
 
 <p>
-  <b>Capacity:</b>
+  <b><%= t('rooms.capacity') %>:</b>
   <%= @room.capacity %>
 </p>
 
 <p>
-  <b>Workshops:</b>
+  <b><%= t('rooms.workshops') %>:</b>
   <ul>
     <% @room.workshops.each do |workshop| %>
       <li><%= link_to(workshop.name, workshop) %></li>
@@ -25,5 +25,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<%= link_to t(:edit), edit_room_path(@room) %> |
+<%= link_to t(:back), rooms_path %>
