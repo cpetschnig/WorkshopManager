@@ -2,7 +2,7 @@ class WorkshopsController < ApplicationController
   # GET /workshops
   # GET /workshops.xml
   def index
-    @workshops = Workshop.all
+    @workshops = Workshop.all(:order => 'start_at')
 
     respond_to do |format|
       format.html # index.html.erb
