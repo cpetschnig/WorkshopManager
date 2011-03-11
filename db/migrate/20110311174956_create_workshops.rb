@@ -1,10 +1,10 @@
 class CreateWorkshops < ActiveRecord::Migration
   def self.up
     create_table :workshops do |t|
-      t.string :name
+      t.string :name, :limit => 20
       t.datetime :start_at
       t.integer :duration
-      t.integer :room_id
+      t.integer :room_id, :null => false
 
       t.timestamps
     end
