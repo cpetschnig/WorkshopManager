@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  start_at: 2011-03-11 18:49:56
+  duration: 1
+  room_id: 1
+
+two:
+  name: MyString
+  start_at: 2011-03-11 18:49:56
+  duration: 1
+  room_id: 1

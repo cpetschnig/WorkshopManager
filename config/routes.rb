@@ -1,4 +1,6 @@
 WorkshopManager::Application.routes.draw do
+  resources :workshops
+
   resources :rooms
 
   # The priority is based upon order of creation:
