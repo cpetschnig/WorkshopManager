@@ -3,6 +3,8 @@ WorkshopManager::Application.routes.draw do
 
   resources :rooms
 
+  match '/language/:new_language' => 'language#set', :new_language => /(de|en)/, :as => 'switch_language'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

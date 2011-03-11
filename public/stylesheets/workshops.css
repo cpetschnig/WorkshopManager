@@ -9,4 +9,6 @@ select {margin-top: 0; margin-right: 0;}
 div.header {background-color: #FFEEDD; margin: 0; padding: 4px 12px 6px; border-bottom: 2px solid gold;}
 div.header ul {padding-left: 0;}
 div.header ul li {list-style: none; display: inline-block;}
+#language {position: absolute; left: 480px; padding-top: 12px;}
+#language span {font-weight: bold;}
 
