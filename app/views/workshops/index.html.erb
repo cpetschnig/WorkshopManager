@@ -16,7 +16,7 @@
     <td><%= workshop.name %></td>
     <td><%= workshop.start_at %></td>
     <td><%= workshop.duration %></td>
-    <td><%= workshop.room_id %></td>
+    <td><%= workshop.room.name %></td>
     <td><%= link_to 'Show', workshop %></td>
     <td><%= link_to 'Edit', edit_workshop_path(workshop) %></td>
     <td><%= link_to 'Destroy', workshop, :confirm => 'Are you sure?', :method => :delete %></td>
