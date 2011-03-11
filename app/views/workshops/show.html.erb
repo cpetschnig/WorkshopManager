@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <b><%= t('workshops.end_at') %>:</b>
+  <%= l(@workshop.end_at) %>
+</p>
+
+<p>
   <b><%= t('workshops.duration') %>:</b>
   <%= @workshop.duration %> <%= t('time.units.minutes.short') %>
 </p>
