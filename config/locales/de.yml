@@ -155,6 +155,7 @@ de:
 
   errors:
     on_save: "Das Objekt konnte wegen %{count} Fehlern nicht gespeichert werden"
+    room_booked: "Der Raum ist in diesem Zeitraum bereits belegt"
     format: "%{attribute} %{message}"
 
     messages: &errors_messages
