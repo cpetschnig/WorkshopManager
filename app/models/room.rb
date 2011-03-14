@@ -4,16 +4,9 @@ class Room < ActiveRecord::Base
 
   def available?(from, to, exclude_workshops = [])
     exclude_workshops = [exclude_workshops] unless exclude_workshops.is_a?(Array)   # convert last parameter to Array
-    exclude_ids = exclude_workshops.map{|workshop| workshop.id}
+    exclude_ids = exclude_workshops.map{|workshop| workshop.id}.compact
     exclude_ids = [-1] if exclude_ids.empty?
 
-    # too bad we cannot do this: there is no colum `end_at'
-    # Workshop.count(:conditions => ["room_id = ? AND start_at < ? AND end_at > ? AND id NOT IN ?", self.id, to, from, exclude_ids]) == 0
-
-    # let's help ourselves with this ugly solution
-    Workshop.all(:conditions => ["room_id = ? AND start_at < ? AND id NOT IN (?)",
-        self.id, to, exclude_ids]).select do |workshop|
-      workshop.end_at > from
-    end.count == 0
+    Workshop.count(:conditions => ["room_id = ? AND start_at < ? AND end_at > ? AND id NOT IN (?)", self.id, to, from, exclude_ids]) == 0
   end
 end
