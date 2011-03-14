@@ -7,9 +7,8 @@ class Workshop < ActiveRecord::Base
 
   validate :room_availability_validation
 
-  def end_at
-    return unless self[:start_at]
-    self[:start_at] + (self[:duration] || 0).minutes
+  def duration
+    (((self[:end_at] || self[:start_at] || Time.new) - (self[:start_at] || Time.new)) / 60).to_i
   end
 
   def room_availability_validation
