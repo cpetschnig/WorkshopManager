@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  location: MyString
-  capacity: 1
+cafeteria:
+  name: Caféteria
+  location: EG
+  capacity: 23
 
-two:
-  name: MyString
-  location: MyString
-  capacity: 1
+audimax:
+  name: Audimax
+  location: 1. OG
+  capacity: 234

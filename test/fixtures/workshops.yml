@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  start_at: 2011-03-11 18:49:56
-  duration: 1
-  room_id: 1
+car_repair:
+  name: Car Repair Workshop
+  start_at: 2011-03-11 18:00:00
+  end_at: 2011-03-11 19:30:00
+  room: cafeteria
 
-two:
-  name: MyString
-  start_at: 2011-03-11 18:49:56
-  duration: 1
-  room_id: 1
+astronomy:
+  name: Astronomy
+  start_at: 2011-03-11 20:00:00
+  end_at: 2011-03-11 22:00:00
+  room: audimax

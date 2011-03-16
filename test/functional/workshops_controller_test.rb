@@ -2,7 +2,7 @@ require 'test_helper'
 
 class WorkshopsControllerTest < ActionController::TestCase
   setup do
-    @workshop = workshops(:one)
+    @workshop = workshops(:car_repair)
   end
 
   test "should get index" do
@@ -18,7 +18,7 @@ class WorkshopsControllerTest < ActionController::TestCase
 
   test "should create workshop" do
     assert_difference('Workshop.count') do
-      post :create, :workshop => @workshop.attributes
+      post :create, :workshop => {:name => 'Songwriting', :start_at => '2011-03-12 12:00:00', :end_at => '2011-03-12 13:30:00', :room => rooms(:cafeteria)}
     end
 
     assert_redirected_to workshop_path(assigns(:workshop))
