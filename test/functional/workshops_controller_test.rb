@@ -24,6 +24,12 @@ class WorkshopsControllerTest < ActionController::TestCase
     assert_redirected_to workshop_path(assigns(:workshop))
   end
 
+  test "should not create workshop when room is not available" do
+    assert_no_difference('Workshop.count') do
+      post :create, :workshop => {:name => 'PHP Programming', :start_at => '2011-03-11 18:30:00', :end_at => '2011-03-11 18:45:00', :room => rooms(:cafeteria)}
+    end
+  end
+
   test "should show workshop" do
     get :show, :id => @workshop.to_param
     assert_response :success
