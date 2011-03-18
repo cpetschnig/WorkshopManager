@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 Given /^the following rooms:$/ do |rooms|
   Room.create!(rooms.hashes)
 end
@@ -5,7 +7,7 @@ end
 When /^I delete the (\d+)(?:st|nd|rd|th) room$/ do |pos|
   visit rooms_path
   within("table tr:nth-child(#{pos.to_i+1})") do
-    click_link "Destroy"
+    click_link "Löschen"
   end
 end
 
